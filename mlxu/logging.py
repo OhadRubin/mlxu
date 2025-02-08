@@ -123,6 +123,9 @@ class WandBLogger(object):
     @property
     def wandb_dir(self):
         return self.config.wandb_dir
+        
+    def finish(self):
+        wandb.finish()
 
 
 def prefix_metrics(metrics, prefix):
